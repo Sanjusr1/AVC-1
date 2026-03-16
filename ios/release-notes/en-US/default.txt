@@ -1,0 +1,11 @@
+Initial release of AVC Flutter mobile application.
+
+Features:
+• Device discovery and pairing over WiFi
+• Real-time health monitoring
+• Device configuration and controls
+• AI-powered assistant
+• Push notifications and alerts
+• Offline support with data sync
+
+This version provides full feature parity with the web application while adding mobile-specific enhancements for better user experience.
