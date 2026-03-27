@@ -32,13 +32,13 @@ class AppTheme {
         color: Color(0xFF212529),
       ),
     ),
-    cardTheme: CardTheme(
-      elevation: AppConstants.defaultElevation,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
-      ),
-      color: const Color(0xFFFFFFFF),
-    ),
+    // cardTheme: CardTheme(
+    //   elevation: AppConstants.defaultElevation,
+    //   shape: RoundedRectangleBorder(
+    //     borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
+    //   ),
+    //   color: const Color(0xFFFFFFFF),
+    // ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color(0xFF0066CC),
@@ -241,13 +241,13 @@ class AppTheme {
         color: Color(0xFFF8F9FA),
       ),
     ),
-    cardTheme: CardTheme(
-      elevation: AppConstants.defaultElevation,
-      shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
-      ),
-      color: const Color(0xFF212529),
-    ),
+    // cardTheme: CardTheme(
+    //   elevation: AppConstants.defaultElevation,
+    //   shape: RoundedRectangleBorder(
+    //     borderRadius: BorderRadius.circular(AppConstants.defaultBorderRadius),
+    //   ),
+    //   color: const Color(0xFF212529),
+    // ),
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color(0xFF4DABF7),

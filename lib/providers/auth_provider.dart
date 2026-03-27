@@ -104,6 +104,27 @@ class AuthNotifier extends StateNotifier<AuthState> {
     try {
       _logger.i('Attempting login for email: $email');
       
+      // Check for demo credentials
+      if (email == 'demo@avc.com' && password == 'Demo@123') {
+        // Simulate successful login for demo
+        await Future.delayed(const Duration(seconds: 1)); // Simulate network delay
+        state = state.copyWith(
+          isAuthenticated: true,
+          isLoading: false,
+          user: User(
+            id: 'demo-user',
+            email: email,
+            name: 'Demo User',
+            emailVerified: true,
+            createdAt: DateTime.now(),
+            updatedAt: DateTime.now(),
+          ),
+          errorMessage: null,
+        );
+        _logger.i('Demo login successful');
+        return true;
+      }
+      
       final result = await _authService.login(email, password);
       
       if (result.success) {

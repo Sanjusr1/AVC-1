@@ -32,11 +32,7 @@ class ConnectivityState {
     this.wifiSignalStrength,
     this.isOnline = false,
     DateTime? lastConnected,
-  }) : lastConnected = lastConnected ?? const Duration().inMilliseconds == 0 
-           ? const Duration().inMilliseconds == 0 
-               ? DateTime.fromMillisecondsSinceEpoch(0)
-               : DateTime.now()
-           : lastConnected!;
+  }) : lastConnected = lastConnected ?? DateTime.now();
 
   ConnectivityState copyWith({
     ConnectivityStatus? networkStatus,

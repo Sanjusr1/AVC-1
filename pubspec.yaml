@@ -20,7 +20,7 @@ dependencies:
   flutter_svg: ^2.0.10
   shimmer: ^3.0.0
   percent_indicator: ^4.2.3
-  syncfusion_flutter_charts: ^24.1.45
+  syncfusion_flutter_charts: ^33.1.44
   flutter_launcher_icons: ^0.13.1
   
   # Networking
@@ -37,21 +37,21 @@ dependencies:
   shared_preferences: ^2.2.2
   
   # Platform Integration
-  wifi_iot: ^0.4.0
+  wifi_iot: any
   network_info_plus: ^5.0.0
   device_info_plus: ^9.1.0
-  package_info_plus: ^5.0.0
+  package_info_plus: ^4.2.0
   url_launcher: ^6.2.0
   image_picker: ^1.0.4
   
   # Notifications
-  firebase_core: ^2.30.0
-  firebase_messaging: ^14.7.10
+  firebase_core: ^2.32.0
+  firebase_messaging: ^14.9.4
   flutter_local_notifications: ^16.1.0
   
   # Analytics & Monitoring
-  firebase_analytics: ^10.6.0
-  firebase_crashlytics: ^3.3.0
+  firebase_analytics: ^10.10.7
+  firebase_crashlytics: ^3.5.7
   logger: ^2.0.0
   
   # Utilities
@@ -69,31 +69,11 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
-  build_runner: ^2.4.7
-  drift_dev: ^2.13.0
-  riverpod_generator: ^2.3.0
-  freezed: ^2.4.5
-  custom_lint: ^0.6.0
-  riverpod_lint: ^2.3.0
 
 flutter:
   uses-material-design: true
   
-  assets:
-    - assets/images/
-    - assets/icons/
-    - assets/fonts/
-  
-  fonts:
-    - family: Inter
-      fonts:
-        - asset: assets/fonts/Inter-Regular.ttf
-        - asset: assets/fonts/Inter-Medium.ttf
-          weight: 500
-        - asset: assets/fonts/Inter-SemiBold.ttf
-          weight: 600
-        - asset: assets/fonts/Inter-Bold.ttf
-          weight: 700
+
 
 # iOS specific configuration
 ios:

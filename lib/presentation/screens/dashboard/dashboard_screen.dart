@@ -231,11 +231,11 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                                   color: Colors.white,
                                 ),
                               ),
-                              title: Text(device['name']),
+                              title: Text(device['name'] as String),
                               subtitle: Column(
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  Text(device['category']),
+                                  Text(device['category'] as String),
                                   const SizedBox(height: 4),
                                   Row(
                                     children: [
@@ -260,7 +260,7 @@ class _DashboardScreenState extends ConsumerState<DashboardScreen> {
                               ),
                               trailing: Chip(
                                 label: Text(
-                                  device['status'],
+                                  device['status'] as String,
                                   style: TextStyle(
                                     color: device['status'] == 'connected' 
                                         ? Colors.green 

@@ -4,50 +4,26 @@ import 'package:go_router/go_router.dart';
 
 import '../../../providers/auth_provider.dart';
 
-class SplashScreen extends ConsumerStatefulWidget {
+class SplashScreen extends ConsumerWidget {
   const SplashScreen({super.key});
 
   @override
-  ConsumerState<SplashScreen> createState() => _SplashScreenState();
-}
-
-class _SplashScreenState extends ConsumerState<SplashScreen> {
-  @override
-  void initState() {
-    super.initState();
-    _initializeApp();
-  }
-
-  Future<void> _initializeApp() async {
-    // Wait for authentication state to initialize
-    await Future.delayed(const Duration(milliseconds: 500));
-    
-    if (!mounted) return;
-    
+  Widget build(BuildContext context, WidgetRef ref) {
     // Listen to auth state changes
     ref.listen<AuthState>(authProvider, (previous, next) {
       if (!next.isLoading) {
         if (next.isAuthenticated) {
-          context.goNamed('dashboard');
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            context.goNamed('dashboard');
+          });
         } else {
-          context.goNamed('login');
+          WidgetsBinding.instance.addPostFrameCallback((_) {
+            context.goNamed('login');
+          });
         }
       }
     });
     
-    // Check current auth state
-    final authState = ref.read(authProvider);
-    if (!authState.isLoading) {
-      if (authState.isAuthenticated) {
-        context.goNamed('dashboard');
-      } else {
-        context.goNamed('login');
-      }
-    }
-  }
-
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       body: Center(
         child: Column(

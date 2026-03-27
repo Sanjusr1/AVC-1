@@ -282,7 +282,7 @@ class _HealthScreenState extends ConsumerState<HealthScreen> {
                   dateFormat: DateFormat('HH:mm'),
                 ),
                 primaryYAxis: NumericAxis(),
-                series: <ChartSeries>[
+                series: <CartesianSeries>[
                   LineSeries<ChartData, DateTime>(
                     dataSource: chartData,
                     xValueMapper: (ChartData data, _) => data.time,

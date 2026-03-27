@@ -95,7 +95,7 @@ class AuthService {
         } else {
           final error = data['error'];
           throw AuthException(
-            error['message'] ?? 'Login failed',
+            (error['message'] as String?) ?? 'Login failed',
             AuthErrorType.invalidCredentials,
           );
         }
